@@ -1,0 +1,241 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/zombieback"
+       >
+
+
+        <LinearLayout
+            android:id="@+id/menu"
+            android:layout_width="284dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="55dp"
+            android:layout_marginRight="55dp"
+            android:layout_marginBottom="138dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="invisible"
+            android:paddingLeft="@dimen/default_padding"
+            android:paddingRight="@dimen/default_padding"
+            android:paddingBottom="@dimen/default_padding">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/home_play"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/button_play"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp"
+                    android:text="@string/home_play"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/home_text_size" />
+
+                <Button
+                    android:id="@+id/home_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button_profile"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp"
+                    android:text="@string/home_profile"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/home_text_size" />
+
+                <Button
+                    android:id="@+id/home_leaderboard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_leaderboard"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp"
+                    android:text="@string/home_leaderboard"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/home_text_size" />
+
+
+                <Button
+                    android:id="@+id/home_achievement"
+                    android:layout_width="237dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_achievement"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp"
+                    android:text="@string/home_achievement"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/home_text_size" />
+
+                <Button
+                    android:id="@+id/home_sign_out"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:alpha="0.5"
+                    android:background="@drawable/button_signout"
+                    android:gravity="center"
+                    android:text="@string/home_sign_out"
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="84dp"
+            android:layout_marginLeft="84dp"
+            android:layout_marginTop="19dp"
+            android:text="  Augmented\n Ghost Hunter"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/white_translucent"
+            android:textIsSelectable="false"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/home_version_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/menu"
+            android:layout_alignRight="@+id/textView2"
+            android:layout_centerHorizontal="true"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/text_view_grey"
+            android:textIsSelectable="false"
+            tools:text="0.3.2" />
+
+        <ImageView
+            android:id="@+id/home_whisply_picture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="-10dp"
+            android:layout_marginBottom="-40dp"
+            android:src="@drawable/ghost"
+            android:visibility="invisible"
+            android:tag="2" />
+
+
+        <ImageButton
+            android:id="@+id/home_help_tuto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="117dp"
+            android:layout_marginLeft="114dp"
+            android:layout_marginRight="247dp"
+            android:layout_marginBottom="11dp"
+            android:layout_toLeftOf="@+id/home_help_tuto"
+            android:background="@drawable/button_base"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:src="@drawable/ic_action_help" />
+
+        <ImageButton
+            android:id="@+id/home_about"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/google_signin_info"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="114dp"
+            android:layout_marginLeft="114dp"
+            android:layout_marginTop="269dp"
+            android:background="@drawable/button_base"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:src="@drawable/ic_action_settings" />
+
+        <Button
+            android:id="@+id/home_sign_in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="230dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/button_signin"
+            android:gravity="center"
+            android:text="@string/home_sign_in"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/google_signin_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="286dp"
+            android:layout_marginEnd="39dp"
+            android:layout_marginRight="39dp"
+            android:gravity="center"
+            android:text="Sign in with yourGoogle Account Email id\nThe data will be saved in database"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/white_translucent"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="163dp"
+            android:layout_height="33dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="67dp"
+            android:layout_marginRight="67dp"
+            android:layout_marginBottom="92dp"
+            android:text="Settings"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="160dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="65dp"
+            android:layout_marginRight="65dp"
+            android:layout_marginBottom="18dp"
+            android:text="About"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</ScrollView>
